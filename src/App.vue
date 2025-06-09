@@ -1,10 +1,15 @@
 <template>
-  <div class="wrapper">
-    <HelloWorld msg="You did it!" />
-    <HelloWorld msg="Nice job!" />
-  </div>
+  <MainNav/>
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import MainNav from "@/components/MainNav.vue";
+
+export default {
+  name: "App",
+  components: {
+    MainNav,
+  },
+}
+
 </script>
