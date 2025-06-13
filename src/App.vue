@@ -1,5 +1,5 @@
 <template>
-  <MainNav/>
+  <main-nav />
 </template>
 
 <script>
@@ -10,6 +10,5 @@ export default {
   components: {
     MainNav,
   },
-}
-
+};
 </script>
