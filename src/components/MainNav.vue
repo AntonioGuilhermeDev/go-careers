@@ -11,7 +11,8 @@
           </ul>
         </nav>
         <div class="ml-auto flex h-full items-center">
-          <action-button />
+          <profile-image v-if="isLoggedIn" />
+          <action-button v-else />
         </div>
       </div>
     </div>
@@ -39,6 +40,7 @@ export default {
         "Estudantes",
         "Empregos",
       ],
+      isLoggedIn: false,
     };
   },
 };
