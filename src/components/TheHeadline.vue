@@ -1,7 +1,11 @@
 <template>
   <section>
-    <h1>{{ action }} para todos</h1>
-    <h2>Encontre seu próximo emprego na Go Careers</h2>
+    <h1 class="mb-14 text-8xl font-bold tracking-tighter">
+      <span :class="actionClasses">{{ action }}</span>
+      <br />
+      para todos
+    </h1>
+    <h2 class="text-2xl font-light">Encontre seu próximo emprego na Go Careers</h2>
   </section>
 </template>
 
@@ -13,6 +17,13 @@ export default {
       action: "Construir",
       interval: null,
     };
+  },
+  computed: {
+    actionClasses() {
+      return {
+        [this.action.toLowerCase()]: true,
+      };
+    },
   },
   created() {
     this.changeTitle();
@@ -33,3 +44,21 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.construir {
+  color: #1a73c8;
+}
+
+.criar {
+  color: #34a853;
+}
+
+.projetar {
+  color: #f9ab00;
+}
+
+.programar {
+  color: #d93025;
+}
+</style>
