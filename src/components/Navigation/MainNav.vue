@@ -12,7 +12,7 @@
         </nav>
         <div class="ml-auto flex h-full items-center">
           <profile-image v-if="isLoggedIn" />
-          <action-button v-else text="Sign In" type="primary" @click="loginUser" />
+          <action-button v-else text="Entrar" type="primary" @click="loginUser" />
         </div>
       </div>
       <the-subnav v-if="isLoggedIn" />
@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import ActionButton from "@/components/ActionButton.vue";
-import ProfileImage from "@/components/navigation/ProfileImage.vue";
-import TheSubnav from "@/components/navigation/TheSubnav.vue";
+import ActionButton from "@/components/Shared/ActionButton.vue";
+import ProfileImage from "@/components/Navigation/ProfileImage.vue";
+import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 export default {
   name: "MainNav",
   components: {
