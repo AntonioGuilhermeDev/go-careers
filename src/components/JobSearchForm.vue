@@ -6,6 +6,7 @@
         <label class="absolute left-0 -top-10">Cargo</label>
         <input
           type="text"
+          v-model="role"
           placeholder="Desenvolvedor de Software"
           class="w-full text-lg font-normal font:outline-none"
         />
@@ -18,6 +19,7 @@
       <div class="flex h-full flex-1 relative items-center pl-3">
         <label class="absolute left-0 -top-10">Onde?</label>
         <input
+          v-model="location"
           type="text"
           placeholder="São Paulo"
           class="w-full text-lg font-normal font:outline-none"
@@ -34,6 +36,12 @@ export default {
   name: "JobSearchForm",
   components: {
     ActionButton,
+  },
+  data() {
+    return {
+      role: "",
+      location: "",
+    };
   },
 };
 </script>
