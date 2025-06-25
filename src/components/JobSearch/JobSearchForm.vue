@@ -4,12 +4,7 @@
     <div class="flex flex-1 flex-nowrap h-full text-base font-light">
       <div class="flex h-full flex-1 relative items-center py-3">
         <label class="absolute left-0 -top-10">Cargo</label>
-        <input
-          type="text"
-          v-model="role"
-          placeholder="Desenvolvedor de Software"
-          class="w-full text-lg font-normal font:outline-none"
-        />
+        <text-input placeholder="Desenvolvedor de Software" @handle-input="role = $event" />
       </div>
       <span
         class="flex items-center h-full border-1 border-l border-r border-brand-gray-3 bg-brand-gray-2 px-3"
@@ -18,12 +13,7 @@
       </span>
       <div class="flex h-full flex-1 relative items-center pl-3">
         <label class="absolute left-0 -top-10">Onde?</label>
-        <input
-          v-model="location"
-          type="text"
-          placeholder="São Paulo"
-          class="w-full text-lg font-normal font:outline-none"
-        />
+        <text-input placeholder="Onde?" @handle-input="location = $event" />
       </div>
     </div>
     <action-button text="Buscar" type="secondary" class="rounded-r-3xl" />
@@ -32,10 +22,13 @@
 
 <script>
 import ActionButton from "@/components/Shared/ActionButton.vue";
+import TextInput from "@/components/Shared/TextInput.vue";
+
 export default {
   name: "JobSearchForm",
   components: {
     ActionButton,
+    TextInput,
   },
   data() {
     return {
