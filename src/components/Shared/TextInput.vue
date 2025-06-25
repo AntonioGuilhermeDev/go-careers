@@ -1,7 +1,7 @@
 <template>
   <input
     type="text"
-    :value="value"
+    :value="modelValue"
     class="w-full text-lg font-normal font:outline-none"
     @input="handleInput"
   />
@@ -10,15 +10,16 @@
 <script>
 export default {
   name: "TextInput",
-  data() {
-    return {
-      value: "",
-    };
+  props: {
+    model: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     handleInput($event) {
       this.value = $event.target.value;
-      this.$emit("handleInput", this.value);
+      this.$emit("update:modelValue", this.value);
     },
   },
 };

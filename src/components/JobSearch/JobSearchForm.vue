@@ -4,7 +4,7 @@
     <div class="flex flex-1 flex-nowrap h-full text-base font-light">
       <div class="flex h-full flex-1 relative items-center py-3">
         <label class="absolute left-0 -top-10">Cargo</label>
-        <text-input placeholder="Desenvolvedor de Software" @handle-input="role = $event" />
+        <text-input v-model="role" placeholder="Desenvolvedor de Software" />
       </div>
       <span
         class="flex items-center h-full border-1 border-l border-r border-brand-gray-3 bg-brand-gray-2 px-3"
@@ -13,7 +13,7 @@
       </span>
       <div class="flex h-full flex-1 relative items-center pl-3">
         <label class="absolute left-0 -top-10">Onde?</label>
-        <text-input placeholder="Onde?" @handle-input="location = $event" />
+        <text-input v-model="location" placeholder="Onde?" />
       </div>
     </div>
     <action-button text="Buscar" type="secondary" class="rounded-r-3xl" />
