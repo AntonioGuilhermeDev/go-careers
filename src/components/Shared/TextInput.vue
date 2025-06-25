@@ -16,6 +16,7 @@ export default {
       required: true,
     },
   },
+  emits: ["update:modelValue"],
   methods: {
     handleInput($event) {
       this.value = $event.target.value;
